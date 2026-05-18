@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">GitHub Finder</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="search-section" class="search-section card">
+      <h1>Search GitHub Users</h1>
+      <p>Enter a user name to fetch a user profile and repos.</p>
+
+      <form id="searchForm" class="search-form" action="javascript:void(0)">
+        <label for="usernameInput" class="visually-hidden">GitHub username</label>
+        <input
+          type="text"
+          id="usernameInput"
+          class="search-input"
+          placeholder="GitHub 사용자 아이디를 입력해 주세요."
+          autocomplete="off"
+        />
+        <button type="submit" id="searchBtn" class="search-button">Search</button>
+      </form>
+    </section>
+
+    <p id="message" class="message">GitHub 사용자 아이디를 입력해 주세요.</p>
+
+    <section id="profile" class="profile-section card hidden" aria-live="polite"></section>
+
+    <section id="repos" class="repos-section card hidden" aria-live="polite">
+      <h2>Latest Repos</h2>
+      <div id="reposList" class="repos-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>GitHub Finder ©</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
